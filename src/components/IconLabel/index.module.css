@@ -1,0 +1,21 @@
+.light {
+    color: rgb(122 130 140);
+}
+
+.dark {
+    color: rgb(175 180 188);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}

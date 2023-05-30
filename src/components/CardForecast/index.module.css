@@ -1,0 +1,55 @@
+.light.container {
+    color: rgb(122 130 140);
+}
+
+.light .weatherName,
+.light .tempMax {
+    color: rgb(23 36 53)
+}
+
+.dark.container {
+    color: rgb(175 180 188);
+
+}
+
+.dark.weatherName,
+.dark.tempMax {
+    color: rgb(196 202 211);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+.day {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather .iconWeather {
+    width: 24px;
+    height: 24px;
+}
+
+.weather .weatherName {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+.temperature {
+    font-size: 16px;
+    text-align: end;
+}

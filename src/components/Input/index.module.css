@@ -1,0 +1,50 @@
+.light .inputSearch {
+    background-color: rgb(234 236 239);
+    color: rgb(122 130 140);
+}
+
+.light .buttonSubmit {
+    background-color: rgb(23 36 53);
+    color: rgb(234 236 239);
+}
+
+.dark .inputSearch {
+    background-color: rgb(32 43 59);
+    color: rgb(175 180 188);
+}
+
+.dark .buttonSubmit {
+    background-color: rgb(175 180 188);
+    color: rgb(32 43 59);
+}
+
+.containerInput {
+    position: relative;
+
+}
+
+.inputSearch {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 10px 80px 10px 10px;
+    font-size: 16px;
+}
+
+.inputSearch:focus {
+    outline: none;
+}
+
+.buttonSubmit {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 16px;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}

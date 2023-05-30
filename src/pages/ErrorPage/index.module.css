@@ -1,0 +1,29 @@
+.errorPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+.titleError {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.subtitleError {
+    font-size: 20px;
+    text-align: center;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.link {
+    background-color: rgb(234 236 239);
+    color: rgb(122 130 140);
+    border-radius: 7px;
+    padding: 10px;
+}

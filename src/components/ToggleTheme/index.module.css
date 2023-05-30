@@ -1,0 +1,43 @@
+.toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggleLabel {
+    background-color: rgb(32 43 59);
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.moon {
+    color: #f1c40f;
+    margin-right: 7px;
+}
+
+.sun {
+    color: #f39c12;
+    margin-left: 7px;
+}
+
+.toggleLabel .ball {
+    background-color: #fff;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    right: 7px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.toggle:checked+.toggleLabel .ball {
+    transform: translateX(-28px);
+}

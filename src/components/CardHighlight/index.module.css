@@ -1,0 +1,35 @@
+.light {
+    color: rgb(122 130 140);    
+}
+
+.light .data {
+    color: rgb(0 26 47)
+}
+
+.dark {
+    color: rgb(175 180 188);
+}
+
+.dark .data {
+    color: rgb(202 208 217)
+}
+
+.header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.iconHighlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+.data {
+    font-size: 24px;
+    font-weight: bold;
+}

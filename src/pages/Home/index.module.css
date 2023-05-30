@@ -1,0 +1,292 @@
+.light {
+    background-color: rgb(245 245 245);
+    min-height: 100vh;
+}
+
+.light .nameCity {
+    color: rgb(23 36 53);
+}
+
+.light .description,
+.light .text {
+    color: rgb(122 130 140);
+}
+
+.light .temperature {
+    color: rgb(23 36 53)
+}
+
+.light .dayAndHour {
+    color: rgb(122 130 140);
+}
+
+
+.dark {
+    background-color: rgb(11 19 30);
+    min-height: 100vh;
+}
+
+.dark .nameCity {
+    color: rgb(196 202 211);
+}
+
+.dark .description,
+.dark .text {
+    color: rgb(175 180 188);
+}
+
+.dark .temperature {
+    color: rgb(196 202 211);
+}
+
+.dark .dayAndHour {
+    color: rgb(175 180 188);
+}
+
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.input {
+    width: 90%;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modalTitle {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.modalText {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modalAction {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.containerPage {
+    padding: 15px 10px;
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.containerInput {
+    width: 80%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.content .weatherCity {
+    margin: 30px 0px 0px;
+}
+
+.content .weatherCity .mainContent {
+    min-height: fit-content;
+}
+
+.content .nameCity {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content .description {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.content .containerIcon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 0px;
+    gap: 25px;
+}
+
+.content .containerIcon .iconWeather {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.content .containerIcon .temperature {
+    text-align: center;
+    font-size: 54px;
+}
+
+.content .containerIcon .dayAndHour {
+    text-align: center;
+}
+
+
+
+.thermalSensation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.titleSection {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.highlightsContainer {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'humidity wind'
+        'pressure cloudiness';
+}
+
+.highlightsContainer .humidity {
+    grid-area: humidity;
+}
+
+.highlightsContainer .wind {
+    grid-area: wind;
+}
+
+.highlightsContainer .pressure {
+    grid-area: pressure;
+}
+
+.highlightsContainer .cloudiness {
+    grid-area: cloudiness;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .input {
+        width: 80%;
+    }
+
+    .containerPage {
+        padding: 15px 25px;
+    }
+
+    .containerInput {
+        width: 50%;
+    }
+
+    .content {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        margin: 30px 0px 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'weatherCity forecast'
+            'highlights highlights';
+    }
+
+    .content .weatherCity {
+        grid-area: weatherCity;
+        margin: 0px;
+    }
+
+    .content .weatherCity .mainContent {
+        min-height: min-content;
+    }
+
+    .content .forecast {
+        grid-area: forecast;
+    }
+
+    .forecastContent {
+        min-height: 489px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .content .highlights {
+        grid-area: highlights;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .input {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .containerPage {
+        padding: 15px 100px;
+    }
+
+    .containerInput {
+        width: 33%;
+    }
+
+    .content {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        margin: 30px 0px 0px;
+        grid-template-columns: 2fr 4fr;
+        grid-template-areas:
+            'weatherCity forecast'
+            'weatherCity forecast'
+            'weatherCity highlights';
+    }
+
+    .content .weatherCity {
+        grid-area: weatherCity;
+        height: 100%;
+        margin: 0px;
+    }
+
+    .content .weatherCity .mainContent {
+        min-height: 608px;
+    }
+
+    .content .forecast {
+        grid-area: forecast;
+    }
+
+    .content .highlights {
+        grid-area: highlights;
+    }
+
+}

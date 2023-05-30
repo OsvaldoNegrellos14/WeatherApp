@@ -1,0 +1,15 @@
+.light.container {
+    background-color: rgb(234 236 239);
+    color: rgb(122 130 140);
+}
+
+.dark.container {
+    background-color: rgb(32 43 59);
+    color: rgb(175 180 188);
+
+}
+
+.container {
+    border-radius: 20px;
+    padding: 20px 25px;
+}
