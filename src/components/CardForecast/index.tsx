@@ -7,6 +7,12 @@ type IProps = {
     infoWeather: IFormatedForecast
 }
 
+/**
+ * This is a TypeScript React component that renders a card displaying weather forecast information.
+ * @param {IProps}  - The code defines a React functional component called `CardForecast` that takes in
+ * a single prop called `infoWeather` of type `IProps`.
+ * @returns A React component called `CardForecast` is being returned.
+ */
 export const CardForecast = ({ infoWeather }: IProps) => {
     const { themeMode } = useContext(ThemeContext)
 

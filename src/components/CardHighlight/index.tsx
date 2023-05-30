@@ -12,6 +12,13 @@ type IProps = {
   infoHighlight: InfoHighlight
 }
 
+/**
+ * This is a TypeScript React component that renders a card with highlighted information.
+ * @param {IProps}  - The function `CardHighlight` takes in a single parameter `infoHighlight` of type
+ * `IProps`.
+ * @returns A React functional component that renders a card with highlighted information, based on the
+ * props passed to it.
+ */
 export const CardHighlight = ({ infoHighlight }: IProps) => {
   const { themeMode } = useContext(ThemeContext)
 

@@ -38,11 +38,22 @@ export const SearcherProvider: React.FC<PropsWithChildren> = ({ children }) => {
       }
     }, [])
 
+   /**
+    * This function updates the name of a city being searched and saves it in local storage.
+    * @param {string} nameCity - A string representing the name of a city that the user wants to search
+    * for.
+    */
     const changeNameCity = (nameCity: string) => {
         setNameCitySearch(nameCity)
         localStorage.setItem('nameCitySearch', nameCity)
     }
 
+    /**
+     * This function searches for the longitude and latitude of a given city using an API, and then
+     * uses those coordinates to search for weather information.
+     * @param {string} nameCity - a string representing the name of a city that the user wants to
+     * search for weather information.
+     */
     const searchNameCity = (nameCity: string) => {
         setIsLoading(true)
         localStorage.setItem('lastSearch', nameCity)
@@ -61,6 +72,12 @@ export const SearcherProvider: React.FC<PropsWithChildren> = ({ children }) => {
             })
     }
 
+    /**
+     * This function searches for weather data by longitude and latitude coordinates and sets the
+     * result or error state accordingly.
+     * @param {number} longitude - A number representing the longitude coordinate of a location on Earth.
+     * @param {number} latitude - A number representing the latitude coordinate of a location on Earth.
+     */
     const searchWeather = (longitude: number, latitude: number) => {
         api.getWeatherByCity(longitude, latitude)
             .then((response: ResponseWeather) => {
@@ -78,6 +95,12 @@ export const SearcherProvider: React.FC<PropsWithChildren> = ({ children }) => {
             })
     }
 
+    /**
+     * This function retrieves a five-day weather forecast based on longitude and latitude coordinates,
+     * formats the data, and sets the result or error state while also toggling the loading state.
+     * @param {number} longitude - A number representing the longitude coordinate of a location on Earth.
+     * @param {number} latitude - A number representing the latitude coordinate of a location on Earth.
+     */
     const fiveDaysForecast = (longitude: number, latitude: number) => {
         api.getFiveDaysWeatherForecast(longitude, latitude)
             .then((response: ResponseForecast) => {

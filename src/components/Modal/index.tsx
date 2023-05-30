@@ -8,6 +8,13 @@ type IModalProps = {
     children: ReactNode
 }
 
+/**
+ * This is a TypeScript React component that renders a modal with a close button and children content,
+ * which is only visible when the `isOpen` prop is true.
+ * @param {IModalProps}  - - `isOpen`: a boolean value indicating whether the modal should be displayed
+ * or not
+ * @returns A React component called "Modal" is being returned.
+ */
 export const Modal = ({ isOpen, onClose, children }: IModalProps) => {
     const { themeMode } = useContext(ThemeContext)
     

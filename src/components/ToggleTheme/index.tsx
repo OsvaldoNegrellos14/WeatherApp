@@ -2,6 +2,11 @@ import { useContext } from 'react'
 import styles from './index.module.css'
 import { ThemeContext } from '../../context/ThemeContext'
 
+/**
+ * This is a React component that toggles between light and dark mode using a checkbox and icons.
+ * @returns A functional component called `ToggleTheme` is being returned. It renders a toggle switch
+ * with a sun and moon icon to represent light and dark mode respectively.
+ */
 export const ToggleTheme = () => {
     const { isDarkMode, toggleMode } = useContext(ThemeContext)
 

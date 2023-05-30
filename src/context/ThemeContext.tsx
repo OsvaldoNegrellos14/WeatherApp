@@ -18,6 +18,9 @@ export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
       setIsDarkMode(themeMode === 'dark' ? true : themeMode === 'light' ? false : false)
     }, [])
 
+    /**
+     * The function toggles between dark and light mode and saves the current mode in local storage.
+     */
     const toggleMode = () => {
         setIsDarkMode(!isDarkMode)
         setThemeMode(!isDarkMode ? 'dark' : 'light')
